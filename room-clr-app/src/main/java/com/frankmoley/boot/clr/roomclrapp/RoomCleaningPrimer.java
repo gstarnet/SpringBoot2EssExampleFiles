@@ -18,9 +18,8 @@ public class RoomCleaningPrimer implements CommandLineRunner{
     }
     @Override
     public void run(String... strings) throws Exception {
-        String url = "http://localhost:8080/api/rooms";
-        Room[] roomArray = this.restTemplate.getForObject(url, Room[].class);
-        List<Room> rooms = Arrays.asList(roomArray);
-        rooms.forEach(System.out::println);
+        String url = "http://localhost:9090/api/rooms";
+        Arrays.asList(this.restTemplate.getForObject(url, Room[].class)).forEach((s) -> System.out.println("Just get name ... "+s.getName()));
+        Arrays.asList(this.restTemplate.getForObject(url, Room[].class)).forEach(System.out::println);
     }
 }
