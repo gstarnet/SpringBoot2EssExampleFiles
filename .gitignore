@@ -1,0 +1,33 @@
+*.java.hsp
+*.sonarj
+*.sw*
+.DS_Store
+!.mvn/wrapper/maven-wrapper.jar
+dependency-reduced-pom.xml
+
+### STS ###
+.apt_generated
+.factorypath
+.settings
+.springBeans
+.sts4-cache
+
+.gradle
+argfile*
+
+# Eclipse artifacts, including WTP generated manifests
+.classpath
+.project
+classes/
+target/
+
+# IDEA artifacts and output dirs
+*.iml
+*.ipr
+*.iws
+.idea
+out
+test-output
+atlassian-ide-plugin.xml
+.gradletasknamecache
+logs
