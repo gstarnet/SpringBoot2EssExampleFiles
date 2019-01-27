@@ -20,5 +20,15 @@ public class InitialBootAppApplication {
 		public String getGreeting(){
 			return "Hello World from the API";
 		}
+		
+		@GetMapping("/greetingjson")
+		public Hello getGreetingJson(){
+			return new Hello();
+		}
+		
+		class Hello{
+			public String message = "Hello message from the Bean";
+		}
+		
 	}
 }
