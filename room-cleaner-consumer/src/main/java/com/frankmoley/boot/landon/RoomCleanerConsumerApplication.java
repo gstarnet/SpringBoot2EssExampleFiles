@@ -12,6 +12,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @SpringBootApplication
 public class RoomCleanerConsumerApplication {
 
@@ -49,7 +51,12 @@ public class RoomCleanerConsumerApplication {
 		container.setMessageListener(listenerAdapter);
 		return container;
 	}
-
+	
+	@Bean
+	ObjectMapper objectMapper() {
+	    return new ObjectMapper();
+	}
+	
 	public static void main(String[] args) {
 		SpringApplication.run(RoomCleanerConsumerApplication.class, args);
 	}
